@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+}
+
+body {
+  margin: 0px;
+  font-family: "outfit", "cairo", sans-serif;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #7a7a7a;
+  border-radius: 5px;
+  padding: 6px;
+  min-width: 300px;
+}
+
+label {
+  color: #4d4d4d;
+  &.required-field::after {
+    content: "*";
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #c10000;
+    position: absolute;
+    margin-left: 4px;
+  }
+}
+
+.error {
+  color: #c10000;
+  font-size: 14px;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}
